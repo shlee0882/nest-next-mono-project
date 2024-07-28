@@ -1,0 +1,178 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/items": {
+      "get": {
+        "operationId": "ItemsController_findAll",
+        "summary": "모든 아이템 조회",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "성공적으로 조회됨."
+          }
+        },
+        "tags": [
+          "items"
+        ]
+      },
+      "post": {
+        "operationId": "ItemsController_create",
+        "summary": "아이템 생성",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateItemDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "성공적으로 생성됨."
+          }
+        },
+        "tags": [
+          "items"
+        ]
+      }
+    },
+    "/items/{id}": {
+      "get": {
+        "operationId": "ItemsController_findOne",
+        "summary": "특정 아이템 조회",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "성공적으로 조회됨."
+          }
+        },
+        "tags": [
+          "items"
+        ]
+      },
+      "put": {
+        "operationId": "ItemsController_update",
+        "summary": "아이템 수정",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateItemDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "성공적으로 수정됨."
+          }
+        },
+        "tags": [
+          "items"
+        ]
+      },
+      "delete": {
+        "operationId": "ItemsController_remove",
+        "summary": "아이템 삭제",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "성공적으로 삭제됨."
+          }
+        },
+        "tags": [
+          "items"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "NestJS API",
+    "description": "The API description",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "schemas": {
+      "CreateItemDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Item name",
+            "description": "The name of the item"
+          },
+          "description": {
+            "type": "string",
+            "example": "Item description",
+            "description": "The description of the item"
+          },
+          "quantity": {
+            "type": "number",
+            "example": 10,
+            "description": "The quantity of the item"
+          }
+        },
+        "required": [
+          "name",
+          "description",
+          "quantity"
+        ]
+      },
+      "UpdateItemDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Updated item name",
+            "description": "The name of the item"
+          },
+          "description": {
+            "type": "string",
+            "example": "Updated item description",
+            "description": "The description of the item"
+          },
+          "quantity": {
+            "type": "number",
+            "example": 15,
+            "description": "The quantity of the item"
+          }
+        }
+      }
+    }
+  }
+}

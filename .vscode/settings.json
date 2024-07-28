@@ -1,0 +1,10 @@
+{
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "eslint.alwaysShowStatus": true,
+    "prettier.singleQuote": true,
+    "prettier.semi": false
+  }
+  

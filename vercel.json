@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server/dist/main.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "client/next.config.js",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/swagger",
+      "dest": "server/dist/main.js"
+    },
+    {
+      "src": "/swagger(.*)",
+      "dest": "server/dist/main.js"
+    },
+    {
+      "src": "/swagger/(.*)",
+      "dest": "server/dist/main.js"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "server/dist/main.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/client/$1"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true, // true로 변경하여 타입 안전성 강화
+    "noImplicitAny": true, // true로 변경하여 암시적 any 타입 방지
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": true, // true로 변경하여 파일명 대소문자 일관성 유지
+    "noFallthroughCasesInSwitch": true,
+    "typeRoots": ["./node_modules/@types"],
+    "moduleResolution": "node" // Node 방식의 모듈 해석
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
