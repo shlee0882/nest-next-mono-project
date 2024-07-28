@@ -41,9 +41,9 @@ $ vercel --prod
 ```
 ### 배포된 URL
 
-- [NextJs](https://nest-next-mono-project-shlee0882-shlee0882s-projects.vercel.app/) 
-- [NestJs API](https://nest-next-mono-project-shlee0882-shlee0882s-projects.vercel.app/api/items)
-- [Swagger UI](https://nest-next-mono-project-shlee0882-shlee0882s-projects.vercel.app/swagger)
+- [NextJs](https://nest-next-mono-project.vercel.app/) 
+- [NestJs API](https://nest-next-mono-project.vercel.app/api/items)
+- [Swagger UI](https://nest-next-mono-project.vercel.app//swagger)
 
 
 ### 사용 기술
